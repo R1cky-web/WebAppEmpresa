@@ -1,0 +1,98 @@
+﻿@model IEnumerable<WebAppEmpresa.Models.Empresa>
+
+<div class="card card-warning card-outline mb-4">
+	<div class="card">
+		<div class="card-header">
+			<i data-lte-icon="collapse" class="bi bi-list"></i>
+			Listado de las empresas
+			<div class="card-tools">
+				<button type="button" class="btn btn-tool" data-lte-toggle="card-collapse">
+					<i data-lte-icon="expand" class="bi bi-plus-lg"> </i>
+					<i data-lte-icon="collapse" class="bi bi-dash-lg"> </i>
+				</button>
+				<button type="button" class="btn btn-tool dropdown-toggle" data-bs-toggle="dropdown">
+					<i class="bi bi-wrench"></i>
+				</button>
+			</div>
+		</div>
+		<div class="card-header">
+			<a class="btn btn-success btn-sm text-white" role="button">
+				<i class="bi bi-plus-square"></i>
+			</a>
+		</div>
+
+<table class="table table-responsive table-hover tabla-sm">
+	<thead>
+		<tr class ="table-warning">
+			<th >
+				<center>
+					<strong>
+						@Html.DisplayNameFor(item => item.IdEmpresa)
+					</strong>
+				</center>
+			</th>
+			
+			<th>
+				<center>
+					<strong>
+						@Html.DisplayNameFor(item => item.RazonSocial)
+					</strong>
+				</center>
+			</th>
+			<th>
+				<center>
+					<strong>
+						@Html.DisplayNameFor(item => item.Ruc)
+					</strong>
+				</center>
+			</th>
+			<th>
+				<center>
+					<strong>
+						@Html.DisplayNameFor(item => item.Direccion)
+					</strong>
+				</center>
+			</th>
+					<th>
+						<center>
+							<strong>
+								Opciones
+							</strong>
+						</center>
+					</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in ViewBag.Empresa)
+		{
+			<tr>
+				<td align="center">@item.IdEmpresa </td>
+				<td align="center">@item.razonsocial </td>
+				<td align="center">@item.Ruc </td>
+				<td align="center">@item.Direccion </td>
+						<td align="center">
+							<a class="btn btn-info btn-sm text-white" role="button">
+								<i class="bi bi-pencil-square"></i>
+							</a>
+							<a class="btn btn-warning btn-sm text-white" role="button">
+								<i class="bi bi-eye-fill"></i>
+							</a>
+							<a class="btn btn-danger btn-sm text-white" role="button">
+								<i class="bi bi-trash3-fill"></i>
+							</a>
+
+						</td>
+			</tr>
+		}
+	</tbody>
+	
+</table>
+
+<div class="card-footer">
+	Listado de empresas 
+	<a href="a"
+	   target="_blank"
+	   class="link-primary">Bootstrap Backbround Colors</a>
+</div>
+</div>
+</div>

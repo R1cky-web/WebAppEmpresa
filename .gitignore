@@ -1,0 +1,77 @@
+# Archivos de configuración de usuario
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Archivos de compilación
+bin/
+obj/
+out/
+
+# Archivos de paquetes
+*.nupkg
+*.snupkg
+packages/
+*.dll
+*.exe
+
+# Archivos de publicación
+publish/
+wwwroot/
+
+# Archivos de logs y temporales
+*.log
+*.tmp
+*.temp
+*.pid
+*.cache
+
+# Archivos de configuración de IDE
+*.ide
+.idea/
+
+# Archivos de configuración de Git
+*.orig
+*.rej
+
+# Archivos de configuración de sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de configuración de herramientas
+*.vspscc
+*.vssscc
+*.pdb
+
+# Archivos de configuración de entorno
+.env
+.env.*
+
+# Archivos de migraciones
+Migrations/
+
+# Archivos de configuración de Rider
+.idea/
+*.sln.iml
+
+# Archivos de configuración de cobertura de código
+coverage/
+*.coverage
+*.coveragexml
+*.codecov
+
+# Archivos de configuración de depuración
+*.log
+*.tlog
+*.dmp
+
+# Archivos de configuración de NuGet
+.nuget/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de configuración de Azure
+*.publishsettings

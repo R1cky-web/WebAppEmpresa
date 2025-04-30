@@ -1,0 +1,78 @@
+﻿@model IEnumerable<WebAppEmpresa.Models.Operaciones>
+
+<div class="card card-primary card-outline mb-4">
+	<div class="card-header">
+		<i data-lite-icon="collapse" class="bi bi-list"></i>
+		Listado de operaciones de empresa
+		<div class="card-tools">
+			<button type="button" class="btn btn-tool" data-lite-icon="collapse">
+				<i data-lite-icon="expand" class="bi bi-plus-lg"> </i>
+				<i data-lite-icon="collapse" class="bi bi-dash-lg"> </i>
+			</button>
+			<button type="button" class="btn btn-tool dropdown-toggle"
+			data-bs-toogle="dropdown">
+				<i class="bi bi-wrench"></i>
+			</button>
+
+		</div>
+
+	</div>
+	<div class="card-header"> 
+		<a class="btn btn-success btn-sm text-white" role="button" asp-action="Create">
+			<i class="bi bi-plus-square"></i>
+		</a>
+
+	</div>
+	<div class="card-body">
+		<table class="table table-bordered  table-hover">
+			<thead>
+				<tr class="table-info">
+					<th><center><strong>@Html.DisplayNameFor(item => item.IdOperaciones)</strong></center></th>
+					<th align="left"><center><strong>@Html.Label("Descripcion")</strong></center></th>
+					<th><center><strong>codigo</strong></center></th>
+					<th><center><strong>@Html.Label("Cantidad")</strong></center></th>
+					<th><center><strong>@Html.Label("importe")</strong></center></th>
+					<th><center><strong>@Html.Label("Igv")</strong></center></th>
+					<th><center><strong>@Html.Label("total")</strong></center></th>
+					<th><center><strong>@Html.DisplayNameFor(item=>item.Estado)</strong></center></th>
+					<th><center><strong>@Html.DisplayNameFor(item => item.Responsable)</strong></center></th>
+					<th><center><strong>Opciones</strong></center></th>
+				</tr>
+
+			</thead>
+			<tbody>
+				@foreach (var td in TempData["Listado"] as List<Operaciones>)
+				{
+					<tr>
+						<td align="center">@td.IdOperaciones</td>
+						<td align="left">@td.Descripcion</td>
+						<td align="center">@td.codigo</td>
+						<td align="center">@td.Cantidad</td>
+						<td align="center">@td.Importe</td>
+						<td align="center">@td.Igv</td>
+						<td align="center">@td.total</td>
+						<td align="center">@td.Estado.Descripcion</td>
+						<td align="center">@td.Responsable.Nombres</td>
+						<td align="center">
+							<a class="btn btn-info btn-sm text-white" role="button">
+								<i class="bi bi-pencil-square"></i>
+							</a>
+							<a class="btn btn-warning btn-sm text-white" role="button">
+								<i class="bi bi-eye-fill"></i>
+							</a>
+							<a class="btn btn-danger btn-sm text-white" role="button">
+								<i class="bi bi-trash3-fill"></i>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+	</div>
+	<div class="card-footer"> 
+		Empresa de Construccion la Mejor Solucion S.A.
+		<a href="" 
+			target="_blank"
+		   class="link-primary"> Derechos reservados la Mejor Solucion S.A. </a>
+	</div>
+</div>	

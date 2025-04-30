@@ -1,0 +1,79 @@
+﻿<h1>@ViewData["TI"]</h1>
+<table class="table table-bordered table-hover table-sm">
+	<thead>
+		<tr class="table-warning">
+			
+			<th>
+				<center>
+					<strong>
+						@ViewData["ID"]
+					</strong>
+				</center>
+			</th>
+			<th>
+				<center>
+					<strong>
+						@ViewData["DE"]
+					</strong>
+				</center>
+			</th>
+			<th>
+				<center>
+					<strong>
+						@ViewData["CA"]
+					</strong>
+				</center>
+			</th>
+			<th>
+				<center>
+					<strong>
+						@ViewData["IM"]
+					</strong>
+				</center>
+			</th>
+			<th>
+				<center>
+					<strong>
+						@ViewData["IG"]
+					</strong>
+				</center>
+			</th>
+			<th>
+				<center>
+					<strong>
+						@ViewData["TO"]
+					</strong>
+				</center>
+			</th>
+			<th>
+				<center>
+					<strong>
+						@ViewData["RE"]
+					</strong>
+				</center>
+			</th>
+			<th>
+				<center>
+					<strong>
+						@ViewData["RE"]
+					</strong>
+				</center>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in ViewData["ListadoOPE"] as IList<WebAppEmpresa.Models.Operacion>)
+		{
+			<tr>
+				<td align="center">@item.idOperacion</td>
+				<td align="center">@item.Descripcion</td>
+				<td align="center">@item.Cantidad</td>
+				<td align="center">@item.Importe</td>
+				<td align="center">@item.Igv</td>
+				<td align="center">@item.total</td>
+				<td align="center">@item.Responsable</td>
+				<td align="center">@item.registro</td>
+			</tr>
+		}
+	</tbody>
+</table>
